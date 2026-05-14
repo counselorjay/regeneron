@@ -1,0 +1,68 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Regeneron STS: counselor intelligence brief',
+  description = 'A counselor-facing strategy guide for Regeneron Science Talent Search planning, eligibility, research positioning, and submission readiness.',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="article" />
+    <meta name="theme-color" content="#0f766e" />
+  </head>
+  <body class="bg-white text-ink-900 antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-accent focus:text-white focus:px-3 focus:py-2 focus:rounded">
+      Skip to content
+    </a>
+    <header class="border-b border-ink-300/60">
+      <div class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
+        <a href="/" class="font-semibold tracking-tight text-ink-900">
+          Regeneron STS Brief
+        </a>
+        <nav aria-label="Section navigation" class="hidden md:block">
+          <ul class="flex gap-5 text-sm text-ink-500">
+            <li><a class="hover:text-accent-dark" href="#what-it-is">What it is</a></li>
+            <li><a class="hover:text-accent-dark" href="#eligibility">Eligibility</a></li>
+            <li><a class="hover:text-accent-dark" href="#winning-project">Winning project</a></li>
+            <li><a class="hover:text-accent-dark" href="#roadmap">Roadmap</a></li>
+            <li><a class="hover:text-accent-dark" href="#readiness">Readiness</a></li>
+            <li><a class="hover:text-accent-dark" href="#resources">Resources</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="border-t border-ink-300/60 mt-16">
+      <div class="mx-auto max-w-5xl px-4 py-8 text-sm text-ink-500 space-y-2">
+        <p>
+          Maintained by Counselor Jay. Snapshot date: May 14, 2026. The 2027 cycle opens June 1, 2026; exact 2027 rules should be rechecked when Society for Science posts the updated packet.
+        </p>
+        <p>
+          This site is not affiliated with Regeneron or Society for Science. Always verify eligibility, deadlines, forms, and rules on
+          <a class="underline hover:text-accent-dark" href="https://www.societyforscience.org/regeneron-sts/application-requirements/" target="_blank" rel="noopener noreferrer">Society for Science's official STS pages</a>
+          at the moment of submission.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  html { scroll-behavior: smooth; }
+  :target { scroll-margin-top: 5rem; }
+  body { font-feature-settings: "ss01", "kern"; }
+</style>

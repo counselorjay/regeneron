@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cycleFacts = [
+  ['Application opens', 'June 1, 2026'],
+  ['Application closes', 'Early November 2026'],
+  ['Customer support cutoff', '24 hours before deadline'],
+  ['Scholars named', 'January 2027 expected'],
+  ['Finalists named', 'Late January 2027 expected'],
+  ['Finalist week', 'March 2027 expected'],
+];
+
+const judgingFactors = [
+  ['Originality', 'A real question, not a packaged demonstration or polished class project.'],
+  ['Scientific rigor', 'A research report that can survive Ph.D.-level review, including limitations.'],
+  ['Independence', 'The idea, execution, analysis, and writing must be the student\'s own work.'],
+  ['Leadership promise', 'Essays and recommendations need to show the student behind the science.'],
+];
+
+const roadmap = [
+  ['May to June', 'Lock mentor boundaries, confirm individual ownership, audit prior research, and define the claim that would be worth a 20-page report.'],
+  ['June to July', 'Rebuild data and baselines, create reproducible notebooks, and write a short methods memo before adding complexity.'],
+  ['July to August', 'Run the main experiment, ablations, and negative controls. Freeze a versioned analysis pipeline.'],
+  ['September', 'Turn results into figures, compare against credible baselines, and collect enough failure cases to make the discussion honest.'],
+  ['October', 'Draft the research report, essays, and recommendation packet. Submit support tickets before the 24-hour support guarantee window.'],
+  ['Early November', 'Submit the full application and recommendations before the 8pm ET deadline once the 2027 exact date is posted.'],
+];
+
+const projectMoves = [
+  ['Anchor the question', 'Start with a mechanism or phenomenon the student found, then make the model serve that discovery.'],
+  ['Beat a baseline', 'STS readers need to know what changed because of the student\'s work. A credible benchmark is cleaner than a dramatic adjective.'],
+  ['Show the student\'s judgment', 'A strong entry explains why tempting alternatives were rejected, not just what finally worked.'],
+  ['Keep the paper defensible', 'Every figure should connect to the central claim, with no cosmetic charts padding the report.'],
+];
+
+const readiness = [
+  ['Eligible senior', 'Last year of secondary school in the U.S. or territories, or a U.S. citizen abroad.'],
+  ['Individual research', 'No team project split apart for STS, even if roles were different.'],
+  ['Original report', 'Maximum 20-page scientific paper, written by the student, with appropriate citations and documentation.'],
+  ['Documentation clean', 'Human subjects, animals, tissues, cell lines, pathogens, and hazardous agents need rules review before submission.'],
+  ['Recommendation plan', 'Teachers and mentors need deadlines, project context, and enough lead time to write specifically.'],
+];
+---
+<BaseLayout>
+  <section class="border-b border-ink-300/60">
+    <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+      <p class="text-xs uppercase tracking-widest text-accent-dark font-semibold">Counselor intelligence brief</p>
+      <h1 class="mt-2 text-3xl md:text-5xl font-semibold tracking-tight text-ink-900">
+        Regeneron Science Talent Search
+      </h1>
+      <p class="mt-4 text-lg text-ink-500 max-w-prose">
+        A practical planning guide for turning serious high-school research into a Regeneron STS submission: eligibility, strategy, timeline, and the kind of project architecture that can credibly compete.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3 text-sm">
+        <a href="#winning-project" class="inline-flex items-center rounded-md bg-accent px-4 py-2 text-white hover:bg-accent-dark">Build the strategy</a>
+        <a href="#readiness" class="inline-flex items-center rounded-md border border-accent text-accent-dark px-4 py-2 hover:bg-accent-soft">Check readiness</a>
+      </div>
+      <p class="mt-6 text-xs text-ink-500">
+        Snapshot date May 14, 2026. Society for Science says the 2027 application opens June 1, 2026 and closes in early November 2026.
+      </p>
+    </div>
+  </section>
+
+  <section id="what-it-is" class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">1. What Regeneron STS is</h2>
+    <div class="mt-4 prose-content space-y-4 text-ink-700 max-w-prose">
+      <p>
+        Regeneron STS is the United States' oldest and most prestigious science and math competition for high-school seniors. It is run by Society for Science and sponsored by Regeneron, with 300 scholars, 40 finalists, and more than $1.8 million in awards each cycle.
+      </p>
+      <p>
+        The core product is not a poster. It is a full application built around an original, independent research report, essays, recommendations, transcripts, and evidence that the student has unusual scientific promise. Treat it like a research thesis plus a leadership file.
+      </p>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      <div class="rounded-lg border border-ink-300 bg-white p-5">
+        <p class="text-xs uppercase tracking-wider text-ink-500">Applicants</p>
+        <p class="mt-1 text-3xl font-semibold text-ink-900">2,600+</p>
+        <p class="mt-2 text-sm text-ink-500">2026 was the largest applicant pool since 1967.</p>
+      </div>
+      <div class="rounded-lg border border-ink-300 bg-white p-5">
+        <p class="text-xs uppercase tracking-wider text-ink-500">Scholars</p>
+        <p class="mt-1 text-3xl font-semibold text-ink-900">300</p>
+        <p class="mt-2 text-sm text-ink-500">Each scholar and school received a $2,000 award in 2026.</p>
+      </div>
+      <div class="rounded-lg border border-ink-300 bg-white p-5">
+        <p class="text-xs uppercase tracking-wider text-ink-500">Finalists</p>
+        <p class="mt-1 text-3xl font-semibold text-ink-900">40</p>
+        <p class="mt-2 text-sm text-ink-500">Finalists compete in March for top national awards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="eligibility" class="bg-slate-50 border-y border-ink-300/60">
+    <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">2. Eligibility and cycle timing</h2>
+      <p class="mt-3 text-ink-500 max-w-prose">
+        The first screen is procedural. If the student or project fails here, stronger science will not rescue the application.
+      </p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-5">
+        <div class="rounded-lg border border-emerald-300 bg-emerald-50 p-5">
+          <h3 class="font-semibold text-emerald-900">A strong STS candidate usually has</h3>
+          <ul class="mt-3 space-y-2 text-sm text-emerald-950 list-disc pl-5">
+            <li>Original research conducted during high school.</li>
+            <li>A clear individual contribution that can be defended without a teammate.</li>
+            <li>A mentor who advises without becoming a hidden co-author.</li>
+            <li>Enough time to write, revise, document approvals, and collect recommendations.</li>
+          </ul>
+        </div>
+        <div class="rounded-lg border border-rose-300 bg-rose-50 p-5">
+          <h3 class="font-semibold text-rose-900">The common disqualifiers</h3>
+          <ul class="mt-3 space-y-2 text-sm text-rose-950 list-disc pl-5">
+            <li>Team research presented as individual work.</li>
+            <li>Missing pre-approval or documentation for regulated research areas.</li>
+            <li>Student is not in the eligible senior-year category.</li>
+            <li>Late application, late recommendation, or unresolved application issue after the support window closes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-xl border border-ink-300 bg-white p-6">
+        <h3 class="font-semibold text-ink-900">2027 cycle planning dates</h3>
+        <ul class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+          {cycleFacts.map(([label, value]) => (
+            <li class="rounded-md border border-ink-300/70 p-4">
+              <p class="text-xs uppercase tracking-wider text-ink-500">{label}</p>
+              <p class="mt-1 font-semibold text-ink-900">{value}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="winning-project" class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">3. The project that can compete</h2>
+    <p class="mt-3 text-ink-500 max-w-prose">
+      Regeneron rewards more than technical polish. The entry needs a scientific claim, a believable method, and visible student judgment.
+    </p>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="rounded-xl border border-ink-300 bg-white p-6">
+        <h3 class="font-semibold text-ink-900">What judges are scoring</h3>
+        <ul class="mt-4 space-y-4">
+          {judgingFactors.map(([label, text]) => (
+            <li>
+              <p class="font-medium text-ink-900">{label}</p>
+              <p class="mt-1 text-sm text-ink-500">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-xl border border-ink-300 bg-white p-6">
+        <h3 class="font-semibold text-ink-900">How to shape the research</h3>
+        <ul class="mt-4 space-y-4">
+          {projectMoves.map(([label, text]) => (
+            <li>
+              <p class="font-medium text-ink-900">{label}</p>
+              <p class="mt-1 text-sm text-ink-500">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 rounded-xl border border-accent/40 bg-accent-soft/50 p-6">
+      <p class="text-xs uppercase tracking-wider text-accent-dark font-semibold">Client strategy pattern</p>
+      <h3 class="mt-2 text-xl font-semibold text-ink-900">Discovery first, model second</h3>
+      <p class="mt-3 text-ink-700 max-w-prose">
+        For an Avery-style climate project, the clean STS arc is: build or discover a novel regime, show why existing models miss it, then design a predictive model that uses the discovery and beats a published baseline in the regime where the old approach fails.
+      </p>
+      <div class="mt-5 grid md:grid-cols-4 gap-3 text-sm">
+        <div class="rounded-md bg-white border border-accent/30 p-4">
+          <p class="font-semibold text-ink-900">1. Novel artifact</p>
+          <p class="mt-1 text-ink-500">Catalogue, dataset, proof, sensor, assay, or pipeline.</p>
+        </div>
+        <div class="rounded-md bg-white border border-accent/30 p-4">
+          <p class="font-semibold text-ink-900">2. Mechanism</p>
+          <p class="mt-1 text-ink-500">What the artifact reveals that was not visible before.</p>
+        </div>
+        <div class="rounded-md bg-white border border-accent/30 p-4">
+          <p class="font-semibold text-ink-900">3. Benchmark</p>
+          <p class="mt-1 text-ink-500">A fair baseline that makes improvement measurable.</p>
+        </div>
+        <div class="rounded-md bg-white border border-accent/30 p-4">
+          <p class="font-semibold text-ink-900">4. Interpretation</p>
+          <p class="mt-1 text-ink-500">Why the result happened and when it does not generalize.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap" class="bg-slate-50 border-y border-ink-300/60">
+    <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">4. Roadmap to submission</h2>
+      <p class="mt-3 text-ink-500 max-w-prose">
+        Work backward from early November. The submission month is for writing and quality control, not discovering whether the experiment works.
+      </p>
+      <ol class="mt-8 space-y-4">
+        {roadmap.map(([window, deliverable]) => (
+          <li class="grid md:grid-cols-[10rem_1fr] gap-3 rounded-lg border border-ink-300 bg-white p-5">
+            <p class="font-semibold text-ink-900">{window}</p>
+            <p class="text-sm text-ink-700">{deliverable}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section id="readiness" class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">5. Readiness check</h2>
+    <p class="mt-3 text-ink-500 max-w-prose">
+      Use this as the first advising screen before committing a student to the STS sprint.
+    </p>
+
+    <div class="mt-8 rounded-xl border border-ink-300 bg-white p-6">
+      <ul class="space-y-4">
+        {readiness.map(([label, text]) => (
+          <li class="flex gap-3">
+            <span class="mt-1 h-5 w-5 shrink-0 rounded border border-accent bg-accent-soft"></span>
+            <div>
+              <p class="font-medium text-ink-900">{label}</p>
+              <p class="mt-1 text-sm text-ink-500">{text}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+      <div class="rounded-lg border border-warn/40 bg-warn-soft p-5">
+        <h3 class="font-semibold text-warn">If time is tight</h3>
+        <p class="mt-2 text-sm text-ink-700">Cut scope before cutting rigor. A smaller claim with clean evidence beats a sprawling project with soft controls.</p>
+      </div>
+      <div class="rounded-lg border border-warn/40 bg-warn-soft p-5">
+        <h3 class="font-semibold text-warn">If the mentor is strong</h3>
+        <p class="mt-2 text-sm text-ink-700">Define advisory boundaries in writing. STS wants independence, not invisible lab authorship.</p>
+      </div>
+      <div class="rounded-lg border border-warn/40 bg-warn-soft p-5">
+        <h3 class="font-semibold text-warn">If the result is negative</h3>
+        <p class="mt-2 text-sm text-ink-700">A negative result can still work if the question mattered, the test was fair, and the explanation is scientifically useful.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="bg-ink-900 text-white">
+    <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">6. Official resources</h2>
+      <p class="mt-3 text-slate-300 max-w-prose">
+        Keep these links close. The 2027 official rules are expected in June 2026, so the site should be refreshed after Society for Science posts the new packet.
+      </p>
+      <ul class="mt-8 grid md:grid-cols-2 gap-4 text-sm">
+        <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/application-requirements/" target="_blank" rel="noopener noreferrer">Application requirements</a></li>
+        <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/official-rules/" target="_blank" rel="noopener noreferrer">Official rules</a></li>
+        <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/frequently-asked-questions/" target="_blank" rel="noopener noreferrer">Frequently asked questions</a></li>
+        <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/judging-and-awards/" target="_blank" rel="noopener noreferrer">Judging and awards</a></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

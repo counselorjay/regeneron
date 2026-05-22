@@ -33,6 +33,42 @@ const projectMoves = [
   ['Keep the paper defensible', 'Every figure should connect to the central claim, with no cosmetic charts padding the report.'],
 ];
 
+const winners = [
+  {
+    year: '2026',
+    title: 'Noble polyhedra, retina-based AI screening, and clam cancer models',
+    link: 'https://www.societyforscience.org/regeneron-sts/2026-sts-winners/',
+    people: [
+      ['Connor Hill', '1st place', 'Completed a computational and proof-driven classification of noble polyhedra, expanding the known set of highly symmetric shapes.'],
+      ['Edward Kang', '2nd place', 'Built RetinaMind, an AI and cell-model approach to screening for neurodevelopmental disorders from retinal signals.'],
+      ['Iris Shen', '3rd place', 'Tested whether clams with naturally occurring blood cancer can serve as a practical model for leukemia drug discovery.'],
+    ],
+    lesson: 'The top three are wildly different fields, but each has a crisp artifact: a complete classification, a working screening model, or a new organism model.',
+  },
+  {
+    year: '2025',
+    title: 'Infrared astronomy, rare-disease treatment, and hypergraph math',
+    link: 'https://www.societyforscience.org/regeneron-sts/2025-sts-winners/',
+    people: [
+      ['Matteo Paz', '1st place', 'Used waveform-based machine learning on nearly 200 terabytes of WISE telescope data to identify infrared variable objects.'],
+      ['Ava Grace Cummings', '2nd place', 'Created a fruit-fly model of STAC3 disorder and tested candidate treatments tied to a rare muscular condition.'],
+      ['Owen Jianwen Zhang', '3rd place', 'Solved a theoretical combinatorics problem involving 3-uniform hypergraphs.'],
+    ],
+    lesson: 'A winning STS project can be computational, experimental, or theoretical. The constant is original work with a concrete contribution.',
+  },
+  {
+    year: '2024',
+    title: 'AI interpretability, cancer metabolism, and mathematical optimization',
+    link: 'https://www.societyforscience.org/regeneron-sts/2024-sts-winners/',
+    people: [
+      ['Achyuta Rajaram', '1st place', 'Improved automatic discovery of visual circuits inside machine-learning models, making image classifiers more interpretable.'],
+      ['Thomas Cong', '2nd place', 'Studied how metabolism and gene expression interact in immune cancers, challenging a simple gene-expression-only view.'],
+      ['Michelle Wei', '3rd place', 'Advanced second-order cone programming solvers, a mathematical optimization tool used in many applied systems.'],
+    ],
+    lesson: 'Top projects often make a hard system more legible: an AI model, a cancer pathway, or a solver that underlies real optimization problems.',
+  },
+];
+
 const readiness = [
   ['Eligible senior', 'Last year of secondary school in the U.S. or territories, or a U.S. citizen abroad.'],
   ['Individual research', 'No team project split apart for STS, even if roles were different.'],
@@ -53,10 +89,11 @@ const readiness = [
       </p>
       <div class="mt-6 flex flex-wrap gap-3 text-sm">
         <a href="#winning-project" class="inline-flex items-center rounded-md bg-accent px-4 py-2 text-white hover:bg-accent-dark">Build the strategy</a>
+        <a href="#winners" class="inline-flex items-center rounded-md border border-accent text-accent-dark px-4 py-2 hover:bg-accent-soft">Study winners</a>
         <a href="#readiness" class="inline-flex items-center rounded-md border border-accent text-accent-dark px-4 py-2 hover:bg-accent-soft">Check readiness</a>
       </div>
       <p class="mt-6 text-xs text-ink-500">
-        Snapshot date May 14, 2026. Society for Science says the 2027 application opens June 1, 2026 and closes in early November 2026.
+        Snapshot date May 21, 2026. Society for Science says the 2027 application opens June 1, 2026 and closes in early November 2026.
       </p>
     </div>
   </section>
@@ -191,9 +228,46 @@ const readiness = [
     </div>
   </section>
 
+  <section id="winners" class="bg-slate-50 border-y border-ink-300/60">
+    <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">4. Winners to study</h2>
+      <p class="mt-3 text-ink-500 max-w-prose">
+        Recent winners are useful because they show the range of projects STS will reward. The lesson is not to copy a field, but to study the shape of the contribution.
+      </p>
+
+      <div class="mt-8 grid gap-5">
+        {winners.map((group) => (
+          <article class="rounded-xl border border-ink-300 bg-white p-6">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-accent-dark font-semibold">{group.year} top three</p>
+                <h3 class="mt-1 text-xl font-semibold text-ink-900">{group.title}</h3>
+              </div>
+              <a class="inline-flex shrink-0 items-center rounded-md border border-accent px-3 py-2 text-sm font-medium text-accent-dark hover:bg-accent-soft" href={group.link} target="_blank" rel="noopener noreferrer">
+                View winners
+              </a>
+            </div>
+            <ul class="mt-5 grid md:grid-cols-3 gap-4">
+              {group.people.map(([name, place, description]) => (
+                <li class="rounded-md border border-ink-300/70 p-4">
+                  <p class="text-xs uppercase tracking-wider text-ink-500">{place}</p>
+                  <p class="mt-1 font-semibold text-ink-900">{name}</p>
+                  <p class="mt-2 text-sm text-ink-500">{description}</p>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-5 rounded-md bg-accent-soft p-4 text-sm text-ink-700">
+              <strong class="text-ink-900">Counselor read:</strong> {group.lesson}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section id="roadmap" class="bg-slate-50 border-y border-ink-300/60">
     <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">4. Roadmap to submission</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">5. Roadmap to submission</h2>
       <p class="mt-3 text-ink-500 max-w-prose">
         Work backward from early November. The submission month is for writing and quality control, not discovering whether the experiment works.
       </p>
@@ -209,7 +283,7 @@ const readiness = [
   </section>
 
   <section id="readiness" class="mx-auto max-w-5xl px-4 py-12 md:py-16">
-    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">5. Readiness check</h2>
+    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">6. Readiness check</h2>
     <p class="mt-3 text-ink-500 max-w-prose">
       Use this as the first advising screen before committing a student to the STS sprint.
     </p>
@@ -246,7 +320,7 @@ const readiness = [
 
   <section id="resources" class="bg-ink-900 text-white">
     <div class="mx-auto max-w-5xl px-4 py-12 md:py-16">
-      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">6. Official resources</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">7. Official resources</h2>
       <p class="mt-3 text-slate-300 max-w-prose">
         Keep these links close. The 2027 official rules are expected in June 2026, so the site should be refreshed after Society for Science posts the new packet.
       </p>
@@ -255,6 +329,8 @@ const readiness = [
         <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/official-rules/" target="_blank" rel="noopener noreferrer">Official rules</a></li>
         <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/frequently-asked-questions/" target="_blank" rel="noopener noreferrer">Frequently asked questions</a></li>
         <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/judging-and-awards/" target="_blank" rel="noopener noreferrer">Judging and awards</a></li>
+        <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/2026-sts-winners/" target="_blank" rel="noopener noreferrer">2026 winners</a></li>
+        <li><a class="block rounded-lg border border-white/20 p-5 hover:bg-white/10" href="https://www.societyforscience.org/regeneron-sts/2026-student-finalists/" target="_blank" rel="noopener noreferrer">2026 project showcase</a></li>
       </ul>
     </div>
   </section>
